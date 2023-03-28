@@ -1,0 +1,12 @@
+C:\flutter_projects\safe_entry_back\SafeEntry\SafeEntry.Persistance\bin\Debug\net6.0\SafeEntry.Persistance.deps.json
+C:\flutter_projects\safe_entry_back\SafeEntry\SafeEntry.Persistance\bin\Debug\net6.0\SafeEntry.Persistance.dll
+C:\flutter_projects\safe_entry_back\SafeEntry\SafeEntry.Persistance\bin\Debug\net6.0\SafeEntry.Persistance.pdb
+C:\flutter_projects\safe_entry_back\SafeEntry\SafeEntry.Persistance\obj\Debug\net6.0\SafeEntry.Persistance.csproj.AssemblyReference.cache
+C:\flutter_projects\safe_entry_back\SafeEntry\SafeEntry.Persistance\obj\Debug\net6.0\SafeEntry.Persistance.GeneratedMSBuildEditorConfig.editorconfig
+C:\flutter_projects\safe_entry_back\SafeEntry\SafeEntry.Persistance\obj\Debug\net6.0\SafeEntry.Persistance.AssemblyInfoInputs.cache
+C:\flutter_projects\safe_entry_back\SafeEntry\SafeEntry.Persistance\obj\Debug\net6.0\SafeEntry.Persistance.AssemblyInfo.cs
+C:\flutter_projects\safe_entry_back\SafeEntry\SafeEntry.Persistance\obj\Debug\net6.0\SafeEntry.Persistance.csproj.CoreCompileInputs.cache
+C:\flutter_projects\safe_entry_back\SafeEntry\SafeEntry.Persistance\obj\Debug\net6.0\SafeEntry.Persistance.dll
+C:\flutter_projects\safe_entry_back\SafeEntry\SafeEntry.Persistance\obj\Debug\net6.0\refint\SafeEntry.Persistance.dll
+C:\flutter_projects\safe_entry_back\SafeEntry\SafeEntry.Persistance\obj\Debug\net6.0\SafeEntry.Persistance.pdb
+C:\flutter_projects\safe_entry_back\SafeEntry\SafeEntry.Persistance\obj\Debug\net6.0\ref\SafeEntry.Persistance.dll
