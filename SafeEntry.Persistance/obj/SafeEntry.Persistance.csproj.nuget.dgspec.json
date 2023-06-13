@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/Users/dinogazic/Desktop/SafeEntry/SafeEntry.Persistance/SafeEntry.Persistance.csproj": {}
+    "/Users/dinogazic/Documents/devApps/SafeEntry/back/SafeEntry.Persistance/SafeEntry.Persistance.csproj": {}
   },
   "projects": {
-    "/Users/dinogazic/Desktop/SafeEntry/SafeEntry.Persistance/SafeEntry.Persistance.csproj": {
+    "/Users/dinogazic/Documents/devApps/SafeEntry/back/SafeEntry.Persistance/SafeEntry.Persistance.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/dinogazic/Desktop/SafeEntry/SafeEntry.Persistance/SafeEntry.Persistance.csproj",
+        "projectUniqueName": "/Users/dinogazic/Documents/devApps/SafeEntry/back/SafeEntry.Persistance/SafeEntry.Persistance.csproj",
         "projectName": "SafeEntry.Persistance",
-        "projectPath": "/Users/dinogazic/Desktop/SafeEntry/SafeEntry.Persistance/SafeEntry.Persistance.csproj",
+        "projectPath": "/Users/dinogazic/Documents/devApps/SafeEntry/back/SafeEntry.Persistance/SafeEntry.Persistance.csproj",
         "packagesPath": "/Users/dinogazic/.nuget/packages/",
-        "outputPath": "/Users/dinogazic/Desktop/SafeEntry/SafeEntry.Persistance/obj/",
+        "outputPath": "/Users/dinogazic/Documents/devApps/SafeEntry/back/SafeEntry.Persistance/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/Users/dinogazic/.nuget/NuGet/NuGet.Config"

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "rud7Bvdy8ge2NFD2WMKYJc+/2NxmoKEBx65eOOU45MG6edHxxHJfYBG1ENyxucJLRgtJXw8ubjOtTK/+xhlzZw==",
+  "dgSpecHash": "fFYecXUn1WlwY70daGP1U2pWnHHzgI6rX/k42oeEeZwcKGe/fDJ8VgirD14f3vQJzlvD2+Eup3W9gwynSxgBjA==",
   "success": true,
-  "projectFilePath": "/Users/dinogazic/Desktop/SafeEntry/SafeEntry.Persistance/SafeEntry.Persistance.csproj",
+  "projectFilePath": "/Users/dinogazic/Documents/devApps/SafeEntry/back/SafeEntry.Persistance/SafeEntry.Persistance.csproj",
   "expectedPackageFiles": [
     "/Users/dinogazic/.nuget/packages/automapper/12.0.1/automapper.12.0.1.nupkg.sha512",
     "/Users/dinogazic/.nuget/packages/dapper/2.0.123/dapper.2.0.123.nupkg.sha512",

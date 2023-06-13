@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "24kLWSzh+ucKqhcHNl17UFemEbKOZrh+tbvPmvHT0HGImFveLMbEdkSvPmJYWzvCODPN73gh3HaHOKNWXOBzrw==",
+  "dgSpecHash": "xWJhPdvi1ZBkQKGbt7daAEgLxOaVMXtG7SFn+mCd840UvFXs/orF9ZJ6zxiPOOX8NSmhd7l3XmFP08FqD8LeLw==",
   "success": true,
-  "projectFilePath": "/Users/dinogazic/Desktop/SafeEntry/SafeEntry.Core/SafeEntry.Core.csproj",
+  "projectFilePath": "/Users/dinogazic/Documents/devApps/SafeEntry/back/SafeEntry.Core/SafeEntry.Core.csproj",
   "expectedPackageFiles": [
     "/Users/dinogazic/.nuget/packages/automapper/12.0.1/automapper.12.0.1.nupkg.sha512",
     "/Users/dinogazic/.nuget/packages/automapper.extensions.microsoft.dependencyinjection/12.0.0/automapper.extensions.microsoft.dependencyinjection.12.0.0.nupkg.sha512",
