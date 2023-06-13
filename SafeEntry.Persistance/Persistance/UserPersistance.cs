@@ -41,15 +41,18 @@ namespace SafeEntry.Persistance.Persistance
             {
                 var parameters = new
                 {
-                  Username = model.UserName,
                   Email = model.Email,
                   LastName = model.LastName,
                   FirstName = model.FirstName,
-                  UserRoleId = model.UserRoleId
-                  
+                  UserRoleId = model.UserRoleId,
+                  CompanyName = model.CompanyName,
+                  PhoneNumber = model.PhoneNumber,
+                  Address = model.Address,
+                  Password = model.Password,
+                  SaltPassword = model.SaltPassword
                 };
 
-                var userModel = await connection.QueryAsync<UserModel>("CALL User_Insert(@Username,@Email,@LastName,@FirstName,@UserRoleId)", parameters);
+                var userModel = await connection.QueryAsync<UserModel>("CALL UserRegister_Insert(@Email,@LastName,@FirstName,@UserRoleId, @CompanyName, @PhoneNumber, @Address, @Password, @SaltPassword)", parameters);
                 return userModel.FirstOrDefault();
             }
         }
@@ -62,7 +65,6 @@ namespace SafeEntry.Persistance.Persistance
                 {
                     Password = model.Password,
                     SaltPassword = model.SaltPassword,
-                    Activated = model.Activated,
                     UserId = model.Id
                 };
 

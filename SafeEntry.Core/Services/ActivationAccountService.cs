@@ -26,7 +26,7 @@ namespace SafeEntry.Core.Services
                 byte[] passwordHash = PasswordManager.GeneratePasswordHash(request.Password, salt);
                 var user = await _userPersistance.GetUserByActivationToken(request.ActivationToken);
 
-                var userModel = new UserModel { Password = passwordHash, SaltPassword = salt, Activated = 1, Id = user.Id };
+                var userModel = new UserModel { Password = passwordHash, SaltPassword = salt, Id = user.Id };
                 await _userPersistance.UpdateUserActivationToken(userModel);
             }
             return response;

@@ -34,7 +34,7 @@ namespace SafeEntry.Core.Services
             {
                 var sha256 = SHA256.Create();
 
-                byte[] password = (sha256.ComputeHash(Encoding.UTF8.GetBytes(userLogin.Password)));
+                byte[] password = (sha256.ComputeHash(Encoding.UTF8.GetBytes((userLogin.Password) + user.SaltPassword)));
                 bool areEqual = StructuralComparisons.StructuralEqualityComparer.Equals(password, user.Password);
                 if (areEqual) {
                     response.Success = true;
