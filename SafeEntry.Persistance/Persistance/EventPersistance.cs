@@ -2,6 +2,7 @@
 using SafeEntry.Persistance.Context;
 using SafeEntry.Persistance.Interfaces;
 using SafeEntry.Persistance.Models;
+using System.Reflection;
 
 namespace SafeEntry.Persistance.Persistance
 {
@@ -11,6 +12,20 @@ namespace SafeEntry.Persistance.Persistance
         public EventPersistance(DapperContext context)
         {
             _context = context;
+        }
+
+        public async Task<EventInvitationModel> EnableDisableInvitation(int guestId)
+        {
+            using (var connection = _context.CreateConnection())
+            {
+                var parameters = new
+                {
+                    GuestId = guestId
+                };
+
+                var invitationModel = await connection.QueryAsync<EventInvitationModel>("CALL EventInvitationEnableDisable_Update(@GuestId)", parameters);
+                return invitationModel.FirstOrDefault();
+            }
         }
 
         public async Task<IEnumerable<EventModel>> GetAll(int id)

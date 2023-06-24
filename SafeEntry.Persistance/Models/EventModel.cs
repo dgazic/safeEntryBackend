@@ -8,5 +8,7 @@
         public string Address { get; set; }
         public string EventStarts { get; set; }
         public int OrganizerId { get; set; }
+        public string CompanyName { get; set; }
+        public int PeopleInvited { get; set; }
     }
 }

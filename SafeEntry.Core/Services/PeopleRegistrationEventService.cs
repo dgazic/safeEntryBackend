@@ -1,4 +1,5 @@
-﻿using SafeEntry.Core.Interfaces;
+﻿using Microsoft.Extensions.Logging;
+using SafeEntry.Core.Interfaces;
 using SafeEntry.Core.Models;
 using SafeEntry.Core.Models.DtoModels;
 using SafeEntry.Core.Responses;
@@ -27,6 +28,7 @@ namespace SafeEntry.Core.Services
             if (response.Success)
             {
                 QRCodeModel qrCodeModel = InvitationQRCodeGenerator.GenerateQRCodeInvitation(request);
+                var _event = await _eventPersistance.GetEventById(request.EventId);
                 UserModel userModel= new UserModel();
                 userModel.Email = request.Email;
                 var eventInvitationModel = new EventInvitationModel { EventId = request.EventId, FirstName = request.FirstName, LastName = request.LastName, Email = request.Email, PhoneNumber = request.PhoneNumber, InvitationCode = qrCodeModel.ShaDataEncoded };
@@ -34,8 +36,8 @@ namespace SafeEntry.Core.Services
 
                 string htmlContent, subject;
                 subject = "SafeEntryCompany - pozivnica za privatnu zabavu";
-                htmlContent = $"Poštovani,<br> Molimo Vas da na ulazu pri ulasku na događaj pokažete dobiveni barkod<br><img src=\"data:image/png;base64,{qrCodeModel.Base64Image}\" width=\"100\" height=\"100\" />";
-                _emailSender.SendEmail(userModel, subject, htmlContent);
+                htmlContent = $"Poštovani/a,<br> {request.FirstName} {request.LastName}<br> Molimo Vas da na ulazu pri ulasku na događaj pokažete dobiveni barkod. <br>Događaj počinje u {_event.EventStarts}, a adresa događaja je {_event.Address}";
+                _emailSender.SendEmail(userModel, subject, htmlContent,qrCodeModel.Base64Image);
             }
             return response;
         }

@@ -9,5 +9,6 @@ namespace SafeEntry.Core.Interfaces
         Task<OrganizerEventsResponse> GetEvent(int eventId);
         Task<ScanQrCodeResponse> ScanQrCodeOnEvent(ScanEventInvitationDto request);
         Task<OrganizerEventsResponse> GetInvitedPeopleEvent(int eventId);
+        Task<OrganizerEventsResponse> EnableDisableInvitation(int guestId);
     }
 }

@@ -53,7 +53,7 @@ namespace SafeEntry.Controllers
             try
             {
                 var response = await _organizerEventService.GetEvent(eventId);
-                return Ok(response.EventsDto);
+                return Ok(response);
             }
             catch (Exception ex)
             {
@@ -93,7 +93,21 @@ namespace SafeEntry.Controllers
             try 
             {
                 var response = await _organizerEventService.GetInvitedPeopleEvent(eventId);
-                return Ok(response.EventsInvitationDto);
+                return Ok(response);
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500, ex.Message);
+            }
+        }
+
+        [HttpPut("EnableDisableInvitation")]
+        public async Task<IActionResult> EnableDisableInvitation(int guestId)
+        {
+            try
+            {
+                var response = await _organizerEventService.EnableDisableInvitation(guestId);
+                return Ok(response);
             }
             catch (Exception ex)
             {

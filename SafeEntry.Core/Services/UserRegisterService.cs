@@ -24,7 +24,7 @@ namespace SafeEntry.Core.Services
             var response = await Validate(request);
             if (response.Success)
             {
-                string password = "1";
+                string password = PasswordManager.GenerateOneTimePassword();
                 byte[] salt = PasswordManager.GenerateSaltHash();
                 byte[] passwordHash = PasswordManager.GeneratePasswordHash(password, salt);
                 var userModel = new UserModel
@@ -41,10 +41,10 @@ namespace SafeEntry.Core.Services
                 };
 
                 await _userPersistance.Insert(userModel);
-                //string subject, htmlContent;
-                //subject = "Safe Entry - Aktivacija računa";
-                //htmlContent = $"<strong>U poruci je jednokratna lozinka koju možete promjeniti nakon što se ulogirate<br>Lozinka: {password}</strong>";
-                //_emailsender.SendEmail(userModel,subject,htmlContent);
+                string subject, htmlContent;
+                subject = "Safe Entry - Aktivacija računa";
+                htmlContent = $"<strong>U poruci je jednokratna lozinka koju možete promjeniti nakon što se ulogirate<br>Lozinka: {password}</strong>";
+                _emailsender.SendEmail(userModel, subject, htmlContent,null);
             }
             return response;
         }

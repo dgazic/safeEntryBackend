@@ -17,6 +17,13 @@ namespace SafeEntry.Core.Services
             _mapper = mapper;
         }
 
+        public async Task<OrganizerEventsResponse> EnableDisableInvitation(int guestId)
+        {
+            var response = new OrganizerEventsResponse();
+            await _eventPersistance.EnableDisableInvitation(guestId);
+            return response;
+        }
+
         public async Task<OrganizerEventsResponse> GetEvent(int eventId)
         {
             var validate = await Validate(eventId);

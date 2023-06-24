@@ -22,5 +22,17 @@ namespace SafeEntry.Core.Utils
             var sha256 = SHA256.Create();
             return sha256.ComputeHash(Encoding.UTF8.GetBytes(Guid.NewGuid().ToString()));
         }
+        public static string GenerateOneTimePassword()
+        {
+            var chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+            var stringChars = new char[8];
+            var random = new Random();
+            for(int i = 0; i <stringChars.Length; i++)
+            {
+                stringChars[i] = chars[random.Next(chars.Length)];
+            }
+            var finalPassword = new String(stringChars);
+            return finalPassword;
+        }
     }
 }
